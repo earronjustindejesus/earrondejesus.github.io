@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Earron Vlogs :)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/*Center Image*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 70px;
+  text-align: center;
+  /*background: #1abc9c;*/
+  color: Black;
+  background-image: url('anime3.jpg'); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: White;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #99CCFF;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 25%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  color:black;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #efefef;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Image Nav, Change image when hovered */
+.fakeimg {
+  background-color: #efefef;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Image Size One Piece,Set Image */
+.onepieceimg{
+  background: url('onepiece.jpg') no-repeat;
+  background-size: 285px 180px;
+  height:180px; 
+  width:285px;
+  float:left;
+  border-style: groove;
+}
+
+/* Image Size One Piece,Hover Image */
+.onepieceimg:hover{
+  background: url('onepiece1.jpg');
+  background-size: 285px 180px;
+  height:180px; 
+  width:285px;
+  border-style: groove;
+}
+
+/* Image Size Attack on Titan,Set Image */
+.aotimg{
+  background: url('aot.jpg') no-repeat;
+  background-size: 285px 180px;
+  height:180px; 
+  width:285px;
+  float:left;
+  border-style: groove;
+}
+
+/* Image Size Attack on Titan,Hover Image */
+.aotimg:hover{
+  background: url('aot1.jpg') no-repeat;
+  background-size: 285px 180px;
+  height:180px; 
+  width:285px;
+  border-style: groove;
+}
+
+/* Image Size Black Clover,Set Image */
+.bcloverimg{
+  background: url('blackclover.jpg') no-repeat;
+  background-size: 285px 180px;
+  height:180px; 
+  width:285px;
+  float:left;
+  border-style: groove;
+}
+
+/* Image Size Black Clover,Set Image */
+.bcloverimg:hover{
+  background: url('blackclover1.jpg') no-repeat;
+  background-size: 285px 180px;
+  height:180px; 
+  width:285px;
+  border-style: groove;
+}
+
+/* Style the Top Image */
+.topimg {
+  float: left;
+  height:180px;
+}
+
+/* Style the Top Label */
+.toplbl {
+  float: left;
+  height:40px;
+  font-size:25px;
+}
+
+/* Image Size One Piece,Set Label */
+.onepiecelbl{
+  background: url('1.png') no-repeat;
+  background-size: 40px 40px;
+  height:40px; 
+  width:40px;
+  float:left;
+}
+
+/* Image Size Attack on Titan,Set Label */
+.aotlbl{
+  background: url('2.png') no-repeat;
+  background-size: 40px 40px;
+  height:40px; 
+  width:40px;
+  float:left;
+}
+
+/* Image Size Black Clover,Set Label */
+.blackcloverlbl{
+  background: url('3.png') no-repeat;
+  background-size: 40px 40px;
+  height:40px; 
+  width:40px;
+  float:left;
+}
+
+/* Label Spacing */
+.spclbl{
+  float:left;
+  height:50px;
+  margin-top:5px; 
+  margin-left:5px;
+}
+
+/* Footer */
+.footer {
+  padding: 3px;
+  text-align: center;
+  background: #333333;
+  color:white
+}
+
+/*HR Separator*/
+hr.new1{
+  border: 3px dotted #434343;
+  background-color: #a2c4c9;
+}
+
+/* Style the Top Comment */
+.topcmt {
+  float: left;
+  font-size:15px;
+  width:100%;
+}
+
+/*Comment Spacing */
+.spccmt{
+  float:left;
+  height:50px;
+  margin-top:12px; 
+  margin-left:5px;
+}
+
+/* Image Size Babbee,Set Label */
+.babbeecmt{
+  background: url('Baby.png') no-repeat;
+  background-size: 40px 40px;
+  height:40px; 
+  width:40px;
+  float:left;
+}
+
+/* Image Size Post1,Set Size */
+.post1{
+  background: url('post1.png') no-repeat;
+  background-size: 40px 40px;
+  height:40px; 
+  width:40px;
+  float:Center;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Earron Vlogs™</h1>
+  <p>“<i>It may be hard right now but you must silent those thoughts. Stop counting those things you have lost, what is gone is gone. So ask yourself, what is there that still remains to you.</i>” – One Piece</p>
+</div>
+
+<div class="navbar">
+  <a href="https://www.facebook.com/earronjustin/" class="right">My Facebook</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <img src="aboutme.jpg" class="center">
+	<p><b>Name:</b> Earron Justin N. De Jesus</p>
+	<p><b>Age:</b> 19 years old</p>
+	<br>
+	
+	<h2>Family Background</h2>
+    <img src="fam.jpg" width=100% height="270">
+	<p><b>Mother's Name:</b> Carmina A. De Jesus</p>
+	<p><b>Father's Name:</b> Eduardo M. De Jesus</p>
+	<p><b>Number of Siblings:</b> 5</p>
+	<list><b>Brother's Name:</b>
+		<ul><li>Erwin N. De Jesus</li>
+		<li>Edward N. De Jesus</li></ul>
+	</list>
+		<list><b>Sister's Name:</b>
+		<ul><li>Ma Zalmina Amante</li>
+		<li>Jhoan Amante</li>
+		<li>Mary Ann Amante</li></ul>
+	</list>
+	<br>
+	
+	<h2>Hobbies</h2>
+    <img src="hobby.jpg" width=100% height="180">
+	<list>
+		<ul><li>Playing Mobile Games</li>
+		<li>Watching Anime</li></ul>
+	</list>
+	<br>
+	
+	<h2>Skills and Talent</h2>
+    <img src="skill_talent.jpg" width=100% height="180">
+	<p><b>Skill:</b> Im good in playing mobile games</p>
+	<p><b>Talent:</b> Singing and Dancing</p>
+	<br>
+	
+	<h2>Strengths and Weaknesses</h2>
+    <img src="strength_weakness.png" width=100% height="180">
+	<p><b>Strengths:</b> Im good in playing mobile games</p>
+	<p><b>Weaknesses:</b> Singing and Dancing</p>
+	<br>
+	
+	<h2>Careers I see Myself after Graduation</h2>
+    <img src="career.jpg" width=100% height="180">
+	<p>After I graduate, I was planning to be/ to be one of the following someday.</p>
+	<list>
+		<ul><li>Network Administrator</li>
+		<li>Database Administrator</li>
+		<li>Senior Technical Consultant</li>
+		<li>Solutions Architect</li></ul>
+	</list>
+	<br>
+	
+  </div>
+  <div class="main">
+    <h1>POSTS</h1>
+    <img src="post1.jpg" class="center"><br>
+	<img src="heart.png" style="height:40px; width:40px;">&nbsp;&nbsp;&nbsp;
+	<img src="comment.png" style="height:40px; width:40px;">&nbsp;&nbsp;&nbsp;
+	<img src="share.png" style="height:40px; width:40px;">&nbsp;
+	<img src="Favorites.png" style="height:50px; width:50px;float:right">
+	<p><img src="trump.png" style="height:25px; width:25px;">
+	<img src="jane.png" style="height:25px; width:25px;">
+	<img src="einstein.png" style="height:25px; width:25px;">&nbsp;&nbsp;&nbsp; <b> You</b>, <b>Donald Trump</b>, <b>Jane Doe</b>, <b>Einstein</b> and <b>99,145</b> liked this post. </p>
+	<hr><h3><b>We are incognito 😎<br><br>📷: Mariela Morales</b></h3>
+    <div class="fakeimg" style="height:60px;">Write a Comment...</div>
+    <hr class = "new1">
+	<h2>My Top 10 Anime</h2>
+    <p><b>Here are my Top 3 picks for my Top Anime.</p>
+	<div class="topimg">
+		<div class ="onepieceimg"></div>
+		<div style="float:left; height:180px; width:103px;"></div>
+		<div class ="aotimg"></div>
+		<div style="float:left; height:180px; width:102px;"></div>
+		<div class ="bcloverimg"></div>
+	</div>
+	<div style="float:left; height:10px; width:100%;"></div>
+	<div class="toplbl">
+		<div style="float:left; height:40px; width:50px;"></div>
+		<div class="onepiecelbl"></div>
+		<div class="spclbl">One Piece</div>
+		<div style="float:left; height:40px; width:210px;"></div>
+		<div class="aotlbl"></div>
+		<div class="spclbl">Attack on Titan</div>
+		<div style="float:left; height:40px; width:170px;"></div>
+		<div class="blackcloverlbl"></div>
+		<div class="spclbl">Black Clover</div>
+		<div style="float:left; height:40px; width:50px;"></div>
+		
+	</div>
+	<div style="float:left; height:30px; width:100%;"></div>
+	<div>
+		<p>Here are the rest for my Top Anime picks:<br>
+			<list>
+				<ul><li>Demon Slayer</li>
+					<img src="demonslayer.jpg" style="height:140px; width:240px;"></ul>
+				<ul><li>7 Deadly Sins</li>
+					<img src="7dsins.jpg" style="height:140px; width:240px;"><br></ul>
+				<ul><li>Jujutsu Kaizen</li>
+					<img src="jujutsukaizen.jpg" style="height:140px; width:240px;"><br></ul>
+				<ul><li>The Promised Neverland</li>
+					<img src="tpneverland.jpeg" style="height:140px; width:240px;"><br></ul>
+				<ul><li>My Hero Academia</li>
+					<img src="heroacademia.png" style="height:140px; width:240px;"><br></ul>
+				<ul><li>Boruto: Naruto Next Generations</li>
+					<img src="boruto.jpg" style="height:140px; width:240px;"><br></ul>
+				<ul><li>Dr. Stone</li>
+					<img src="drstone.jpeg" style="height:140px; width:240px;"><br></ul>
+			</list>
+		</p>
+		</b>
+		<img src="heart.png" style="height:40px; width:40px;">&nbsp;&nbsp;&nbsp;
+		<img src="comment.png" style="height:40px; width:40px;">&nbsp;&nbsp;&nbsp;
+		<img src="share.png" style="height:40px; width:40px;">&nbsp;
+		<img src="Favorites1.png" style="height:50px; width:50px;float:right">
+		<p><img src="Zuckerberg.png" style="height:25px; width:25px;">
+		<img src="Baby.png" style="height:25px; width:25px;">
+		<img src="Joe.png" style="height:25px; width:25px;">&nbsp;&nbsp;&nbsp; <b> You</b>,<b> Mark Zuckerberg</b>, <b>Babbee Dee</b>, <b>Lee Carter</b> and <b>768,934</b> liked this post. </p>
+		<hr>
+		<div class="fakeimg" style="height:60px;">Write a Comment...</div>
+	</div>
+
+  </div>
+</div>
+
+<div class="footer" style="height:40px;">
+  <h5 style="margin-top:5px">© COPYRIGHT Earron VLogs™  All Rights Reserved. </h5>
+</div>
+
+</body>
+</html>
